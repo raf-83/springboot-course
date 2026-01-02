@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: springboot-course
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  application:
+    name: springboot-course-dev
+  datasource:
+    url: jdbc:postgresql://localhost:5432/springboot_course
+    username: postgres
+    password: kurs_123
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format-sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+server:
+  port: 8080
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  application:
+    name: springboot-course-prod
+server:
+  port: 8080
