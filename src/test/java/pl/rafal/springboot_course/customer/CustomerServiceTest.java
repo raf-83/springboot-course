@@ -38,7 +38,7 @@ class CustomerServiceTest {
 
         Customer passedToSave = captor.getValue();
         assertThat(passedToSave.getId()).isNull(); // serwis powinien wyczyścić id
-        assertThat(result.getId()).isEqualTo(999L);
+        assertThat(result.getId()).isEqualTo(1L);
         assertThat(result.getName()).isEqualTo("Rafal");
     }
 
